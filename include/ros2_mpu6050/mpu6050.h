@@ -41,7 +41,7 @@
 
 class Mpu6050 {
 public:
-    explicit Mpu6050(const std::string &device = "/dev/i2c-1", int i2c_address = I2C_ADDRESS_MPU6050_AD0_L);
+    explicit Mpu6050(const std::string &device = "/dev/i2c-3", int i2c_address = I2C_ADDRESS_MPU6050_AD0_L);
 
     ~Mpu6050();
 

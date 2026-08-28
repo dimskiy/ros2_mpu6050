@@ -10,7 +10,7 @@ Mpu6050Hal::Mpu6050Hal(const std::string& device, const uint8_t i2c_address)
     fd_bus = open(device.c_str(), O_RDWR);
     if (fd_bus < 0)
     {
-        std::cerr << "Failed to open file descriptor!" << std::endl;
+        std::cerr << "Failed to open file descriptor!" << "device: " << device << std::endl;
         exit(1);
     }
     if (ioctl(fd_bus, I2C_SLAVE, i2c_address) < 0) 

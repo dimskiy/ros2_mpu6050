@@ -52,7 +52,7 @@ Mpu6050::Mpu6050(const std::string &device, int i2c_address)
 
     ret |= Mpu6050_GetDevideId(dev_id);
 
-    if(Mpu6050Hal::MPU6050_OK == ret && dev_id == WHO_AM_I_VAL)
+    if(Mpu6050Hal::MPU6050_OK == ret)
     {
         std::cout << "MPU6050 initialization successful" << std::endl;
     }
